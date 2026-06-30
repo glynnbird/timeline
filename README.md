@@ -14,5 +14,5 @@ curl -X POST -H'Content-type:application/json' -H"apikey: $APIKEY" -d'{"title":"
 ### List
 
 ```sh
-curl -H"apikey: $APIKEY" "https://$URL/api/list"
+curl -X POST -H'Content-type:application/json' -H"apikey: $APIKEY" "https://$URL/api/list"
 ```

@@ -29,7 +29,7 @@ export const add = async function (kv, json) {
 
   // if there's all the parts we need
   if (json && json.id && metadata) {
-    await kv.put(json.id, JSON.stringify({}), { metadata })
+    await kv.put(json.id, JSON.stringify({}), { metadata, expirationTtl: 60 * 60 * 24 }) // 1 day TTL
 
     // send response
     return { ok: true, id: json.id }
