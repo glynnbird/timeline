@@ -7,3 +7,4 @@ code/dist
 dist
 code/node_modules
 functions/api/*.js
+node_modules
