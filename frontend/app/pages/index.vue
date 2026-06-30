@@ -21,6 +21,10 @@
       console.log('API', '/api/list')
       const r = await $api('/api/list')
       events.value = r.list
+      events.value.map((e) => {
+        e.ts = new Date(e.ts)
+        return e
+      })
     } catch (e) {
       console.error('failed to fetch list of events', e)
     }
@@ -41,7 +45,7 @@
       <div>
         <div class="text-title-large">{{ event.title }}</div>
         <p>
-          {{ event.ts.slice(11,19) }}
+          {{ event.ts.toLocaleTimeString() }}
         </p>
       </div>
     </v-timeline-item>
