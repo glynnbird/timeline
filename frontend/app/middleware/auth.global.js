@@ -8,9 +8,9 @@ export default defineNuxtRouteMiddleware((to, from) => {
     console.log('loading auth from localStorage')
     loadFromLocalStorage()
   }
-
+console.log(to)
   // if we're not already on the login page and we're not logged in... go to login page
-  if (to.fullPath !== '/login' && !isLoggedIn()) {
+  if (to.fullPath !== '/login' && to.name !== 'index' && !isLoggedIn()) {
     return navigateTo('/login')
   }
 })

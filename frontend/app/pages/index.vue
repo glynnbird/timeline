@@ -3,14 +3,15 @@
 
   const config = useRuntimeConfig()
   const apiHome = config.public['apiBase'] || window.location.origin
-  const { auth } = useAuth()
+  const route = useRoute()
+  const apikey = route.query.apikey 
 
   const $api = $fetch.create({
     baseURL: apiHome,
     method: 'post',
     headers: {
       'content-type': 'application/json',
-      apikey: auth.value.apiKey
+      apikey: apikey
     }
   })
 
