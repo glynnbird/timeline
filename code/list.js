@@ -8,7 +8,7 @@ export async function onRequest(context) {
   if (r) return r
 
   // list keys in the KV store, bound to this worker as TVKV
-  const response = await list(context.env.TVKV)
+  const response = await list(context.env.TIMELINEKV)
 
   // send response
   return new Response(JSON.stringify({ ok: true, list: response }), okResponse)
