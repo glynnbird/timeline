@@ -29,8 +29,12 @@
       <template v-slot:icon v-if="event.img">
         <v-avatar :image="event.img"></v-avatar>
       </template>
-      <p class="title">{{ event.title }}</p>
-      <p class="time">{{ event.ts.toLocaleTimeString() }}</p>
+      <v-card>
+        <v-card-text>
+          <p class="title">{{ event.title }}</p>
+          <p class="time">{{ event.ts.toLocaleTimeString() }}</p>
+        </v-card-text>
+      </v-card>
     </v-timeline-item>
   </v-timeline>
 </template>
