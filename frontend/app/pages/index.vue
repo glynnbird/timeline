@@ -43,12 +43,10 @@
       <template v-slot:icon v-if="event.img">
         <v-avatar :image="event.img"></v-avatar>
       </template>
-      <div>
-        <div class="text-title-large">{{ event.title }}</div>
-        <p>
-          {{ event.ts.toLocaleTimeString() }}
-        </p>
-      </div>
+      <v-card>
+        <v-card-title>{{ event.title }}</v-card-title>
+        <v-card-subtitle>{{ event.ts.toLocaleTimeString() }}</v-card-subtitle>
+      </v-card>
     </v-timeline-item>
   </v-timeline>
 </template>
