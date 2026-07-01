@@ -13,11 +13,11 @@
 <style>
 
 .title {
-  font-size: 0.85rem !important;
+  font-size: 1rem !important;
   font-weight: normal !important;
 }
 .time {
-  font-size: 0.7rem !important;
+  font-size: 0.8rem !important;
 }
 </style>
 <template>
